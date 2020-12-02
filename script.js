@@ -2,7 +2,7 @@ const popUpForm = document.getElementById('popUp');
 const newBookButton = document.getElementById('newBtn');
 const addBookButton = document.getElementById('addBtn');
 const libraryDisplay = document.getElementById('list-container');
-const closePopUP = document.querySelector('.close');
+const closePopUP = document.getElementById('close');
 
 addBookButton.addEventListener('click', addBookToMyLibrary);
 
@@ -21,7 +21,6 @@ function bookInfo (title, author, pages, read) {
 
 function addBookToMyLibrary(e) {
   e.preventDefault();
-  popUpForm.style.display = 'none';
 
   let newBook = new bookInfo(title, author, pages, read);
   myLibrary.push(newBook);
@@ -92,14 +91,14 @@ function createBook(item) {
   libraryDisplay.appendChild(bookDiv);
 }
 
-function setData() {
-  localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
-}
-
 if (!localStorage.myLibrary) {
   displayBook();
 } else {
   let books = JSON.parse(localStorage.getItem('myLibrary'));
   myLibrary = books;
   displayBook();
+}
+
+function setData() {
+  localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
 }
