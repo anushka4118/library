@@ -1,0 +1,125 @@
+body {
+    background-image: url('library.jpg');
+    background-size: auto;
+    opacity: 0.8; 
+}
+
+h1 {
+    text-align: center;
+    font-family: Geneva, Tahoma, sans-serif;
+    color: rgb(155, 137, 137);
+}
+
+#newBtn {
+    padding: 6px;
+    border: black solid 1px;
+    border-radius: 2px;
+    background-color: rgb(172, 144, 144);
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(104, 43, 43);
+}
+
+#form {
+    width: 250px;
+    height: 315px;
+}
+
+h2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(199, 89, 89);
+}
+
+#popUp {
+    margin: auto;
+    width: 250px;
+    margin-bottom: 50px;
+}
+
+#close {
+    font-size: 14px;
+    color: rgb(97, 52, 52);
+    font-weight: bolder;
+    text-align: left;
+    padding-left: 2px;
+}
+
+form {
+    background-color: rgb(179, 161, 152);
+    border-radius: 4px;
+    padding-top: 5px;
+}
+
+input {
+    display: block;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 2px; 
+    border: none;
+    width: 200px;
+}
+
+::placeholder {
+    color: rgb(97, 52, 52);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#checkbox {
+    margin-top: 10px;
+}
+
+p {
+    text-align: center;
+    color: rgb(97, 52, 52);
+    font-size: 16px;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+#addBtn {
+    width: 100px;
+    color: rgb(97, 52, 52);
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+}
+
+#list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    height: 200px;
+    line-height: 2;
+    padding: 15px;
+    margin: 20px;
+    color:rgb(97, 52, 52, 0.9);
+    font-family: Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    background-color: rgb(179, 161, 152);
+    border: 3px black solid;
+    border-radius: 2px;
+}
+
+.readButton {
+   margin: 10px;
+   border-radius: 1px;
+   padding: 2px;
+}
+
+.removeButton {
+    margin: 2px;
+    border-radius: 1px;
+    padding: 2px;
+    background: rgb(196, 192, 190);
+}

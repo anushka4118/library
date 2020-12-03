@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Library</title>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Your Library</h1> 
+  <h1>Your Library</h1>
   <div id="newBook">
     <button id="newBtn">New Book</button>
   </div>
   <div id="popUp">
-    <h3>Add a Book</h3>
+    <h2>Add a Book</h2>
     <form id="form">
-      <span class="close">close</span>
+      <span id="close">close</span>
       <input type="text" id="title" name="title" placeholder="Title">
-      <input type="text" id="author"name="author" placeholder="Author">
+      <input type="text" id="author" name="author" placeholder="Author">
       <input type="text" id="pages" name="text" placeholder="No. of Pages">
-      <label>Read</label>
-      <input type="checkbox" id="read" name="read" >
-      <input type="submit" id="addBtn" value="Add" >
+      <div id='checkbox'>
+        <p><label >Read: </label><input type='checkbox' id='read' name='read'></p>
+      </div>
+      <input type="submit" id="addBtn" value="Add">
     </form>
   </div>
   <div id="list-container"></div>
   <script src="script.js"></script>
 </body>
+
 </html>
