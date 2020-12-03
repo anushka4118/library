@@ -51,25 +51,25 @@ function createBook(item) {
   
   titleDiv.classList.add('title');
   bookDiv.appendChild(titleDiv);
-  titleDiv.textContent = item.title;
+  titleDiv.textContent = "Title: " + item.title;
 
   authorDiv.classList.add('author');
   bookDiv.appendChild(authorDiv);
-  authorDiv.textContent = item.author;
+  authorDiv.textContent = "Author: " + item.author;
 
   pagesDiv.classList.add('pages');
   bookDiv.appendChild(pagesDiv);
-  pagesDiv.textContent = item.pages;
+  pagesDiv.textContent = "Pages: " + item.pages ;
 
   readButton.classList.add('readButton');
   bookDiv.appendChild(readButton);
 
   if(item.read===false) {
     readButton.textContent = 'Not Read';
-    readButton.style.backgroundColor = '#e04f63'
+    readButton.style.backgroundColor = 'rgb(206, 38, 38)';
   } else {
     readButton.textContent = 'Read';
-    readButton.style.backgroundColor = '#63da63'
+    readButton.style.backgroundColor = 'rgb(48, 148, 91)';
   }
 
   readButton.addEventListener('click', () => {
@@ -79,7 +79,7 @@ function createBook(item) {
   })
 
   removeButton.textContent = 'Remove';
-  removeButton.classList.add('removeBtn');
+  removeButton.classList.add('removeButton');
   bookDiv.appendChild(removeButton);
 
   removeButton.addEventListener('click', () => {
