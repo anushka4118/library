@@ -12,12 +12,14 @@ closePopUP.addEventListener('click', () => popUpForm.style.display = 'none');
 
 let myLibrary = [];
 
-function bookInfo (title, author, pages, read) {
+class bookInfo {
+  constructor(title, author, pages, read) {
     this.title = form.title.value;
     this.author = form.author.value;
     this.pages = form.pages.value;
     this.read = form.read.checked;
   }
+}
 
 function addBookToMyLibrary(e) {
   e.preventDefault();
@@ -34,7 +36,7 @@ function displayBook() {
   const books = document.querySelectorAll('.book');
   books.forEach(book => libraryDisplay.removeChild(book));
 
-  for (let i=0; i<myLibrary.length;i++) {
+  for (let i = 0; i < myLibrary.length; i++) {
     createBook(myLibrary[i]);
   }
 }
@@ -48,7 +50,7 @@ function createBook(item) {
   const removeButton = document.createElement('button');
 
   bookDiv.classList.add('book');
-  
+
   titleDiv.classList.add('title');
   bookDiv.appendChild(titleDiv);
   titleDiv.textContent = "Title: " + item.title;
@@ -59,12 +61,12 @@ function createBook(item) {
 
   pagesDiv.classList.add('pages');
   bookDiv.appendChild(pagesDiv);
-  pagesDiv.textContent = "Pages: " + item.pages ;
+  pagesDiv.textContent = "Pages: " + item.pages;
 
   readButton.classList.add('readButton');
   bookDiv.appendChild(readButton);
 
-  if(item.read===false) {
+  if (item.read === false) {
     readButton.textContent = 'Not Read';
     readButton.style.backgroundColor = 'rgb(206, 38, 38)';
   } else {
@@ -83,7 +85,7 @@ function createBook(item) {
   bookDiv.appendChild(removeButton);
 
   removeButton.addEventListener('click', () => {
-    myLibrary.splice(myLibrary.indexOf(item), 1); 
+    myLibrary.splice(myLibrary.indexOf(item), 1);
     displayBook();
     setData();
   })
